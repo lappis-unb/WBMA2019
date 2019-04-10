@@ -1,4 +1,4 @@
-# SoHeal sources
+# WBMA sources
 
 [![Build Status](https://travis-ci.org/soheal/soheal.github.io.svg?branch=sources)](https://travis-ci.org/soheal/soheal.github.io)
 
