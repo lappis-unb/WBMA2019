@@ -20,8 +20,7 @@
             {% for text, url in [
                 ('Topics of Interest', 'toi.html'),
                 ('Paper Submission', 'paper_submission.html'),
-                ('Committees', 'committees.html'),
-                ('To Do', 'todo.html')
+                ('Committees', 'committees.html')
               ] -%}
               <li{% if page == url %} class="active"{% endif %}><a href="{{ url|relative }}">{{ text }}</a></li>
             {% endfor %}
