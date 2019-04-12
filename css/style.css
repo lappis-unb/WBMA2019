@@ -8,6 +8,9 @@ footer {
   color: gray;
   padding: 1em 0em 1em 0em;
 }
+.navbar-default {
+  background-image: -webkit-linear-gradient(#5c95b6, #5c95b6 60%, #5c95b6);
+}
 
 .navbar-brand {
   font-weight: bold;
