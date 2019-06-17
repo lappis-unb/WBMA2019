@@ -1,9 +1,14 @@
-# WBMA sources
+Agile Brazil Hotsite
+=================
+[![CircleCI](https://circleci.com/gh/agile-alliance-brazil/agile-brazil-hotsite.svg?style=svg&circle-token=d02c5ec05e9195f29afbb4177eaeca978de28f09)](https://circleci.com/gh/agile-alliance-brazil/agile-brazil-hotsite)
 
+Repository for Agile Brazil website at https://www.agilebrazil.com/
 
+## Old websites downloaded with
 
-This website is built with [Genja](https://github.com/AlexandreDecan/Genja), a minimalist static website generator written specifically for WBMA 2019. It is built on top of [Jinja2](https://jinja.pocoo.org/docs/latest/), a powerful template engine written in Python. The layout of the website relies on [Bootstrap 3](https://getbootstrap.com/docs/3.3/). 
+https://github.com/hartator/wayback-machine-downloader
 
-Any modification or pull request should be done on the "sources" branch. Please note that NO modification should be done on the "master" branch on GitHub. Every commit done in the sources branch triggers an automatic build (thanks to Travis-CI) by Genja, and an automatic deployment to GitHub pages (ie. the content of the output folder will be copied as-is to the master branch). Notice that any "invalid" modification (ie. any modifications that lead to something that cannot be processed by Genja) will not be deployed. The "build status" badge informs you of the status of the latest build. 
-
-If you want to locally test your modifications before pushing them, go to the Genja repository and download both ``genja.py`` and ``requirements.txt``. The script requires Python >= 3.4, and some dependencies that can be easily installed using ``pip install -r requirements.txt``. Then simply type ``python genja.py`` at the root of this repository to build the pages. 
+    docker pull hartator/wayback-machine-downloader
+    docker run --rm -it -v $PWD/websites:/websites hartator/wayback-machine-downloader http://www.agilebrazil.com/2018/ -f 20180807005015
+    docker run --rm -it -v $PWD/websites:/websites hartator/wayback-machine-downloader http://www.agilebrazil.com/2017/ -f 20171211041111
+    docker run --rm -it -v $PWD/websites:/websites hartator/wayback-machine-downloader http://www.agilebrazil.com/2015/ -f 20170203113140
